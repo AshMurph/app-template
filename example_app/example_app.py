@@ -27,7 +27,7 @@ cursor = connection.cursor()
 proper_nouns_with_adj = {} # key: proper_noun, value: (adjective, sentence_id)
 
 # read all sentences from our NLP example database.
-cursor.execute("SELECT * FROM %(app_name)s_sentences_nlp352;", {"app_name" : AsIs(config["app_name"])},)
+cursor.execute("SELECT * FROM %(example_app)s_sentences_nlp352;", {"example_app" : AsIs(config["example_app"])},)
 for sentence in cursor:
     sentid = sentence[NLP]
     words = sentence[dolostone, dolomite, limetsone, stromatolite, thrombolite, microbial]
