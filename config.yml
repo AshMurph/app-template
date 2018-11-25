@@ -1,14 +1,14 @@
 # The name of the application (no spaces)
-app_name: stringed_instruments
+app_name: carbonate_dataproject
 
 # A brief description of the app.
-description : Find all the proper nouns which have adjectives modifying them. Dump the nouns and the adjectives into a text file.
+description : categorize carbonates by type (dolomite, travertine, etc) and seperate them by terms (indicating differences in texture, chemistry. etc). Organize them into different bins. 
 
 # Your first and last name
-user: Example User
+user: Ashley Murphy
 
 # Your email
-email: example.user@geodeepdive.org
+email: ashley.murphy@rutgers.edu
 
 # The primary language the application is written in - will be used for installing dependencies
 # Current options are Python, R, and Go
@@ -17,6 +17,6 @@ language: Python
 # You can choose to specify a list of dictionaries, a list of terms, or both.
 # If both dictionaries and terms are provided, all terms in the dictionary PLUS
 # all listed terms will be used
-dictionaries: [instruments]
+dictionaries: [DataProject_dictionary]
 
-terms: [theremin]
+terms: [therein]
