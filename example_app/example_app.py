@@ -19,9 +19,9 @@ with open('../config.yml', 'r') as config_yaml:
 # Connect to Postgres
 connection = psycopg2.connect(
     dbname=credentials['postgres']['database'],
-    user=credentials['postgres']['user'],
-    host=credentials['postgres']['host'],
-    port=credentials['postgres']['port'])
+    user=credentials['postgres']['postgres'],
+    host=credentials['postgres']['localhost'],
+    port=credentials['postgres']['5432'])
 cursor = connection.cursor()
 
 proper_nouns_with_adj = {} # key: proper_noun, value: (adjective, sentence_id)
@@ -29,10 +29,10 @@ proper_nouns_with_adj = {} # key: proper_noun, value: (adjective, sentence_id)
 # read all sentences from our NLP example database.
 cursor.execute("SELECT * FROM %(app_name)s_sentences_nlp352;", {"app_name" : AsIs(config["app_name"])},)
 for sentence in cursor:
-    sentid = sentence[1]
-    words = sentence[3]
-    poses = sentence[4]
-    dep_parents = sentence[8]
+    sentid = sentence[NLP]
+    words = sentence[dolostone, dolomite, limetsone, stromatolite, thrombolite, microbial]
+    poses = sentence[dolo, lime, strom, thromb, microb]
+    dep_parents = sentence[DataProject_dictionary]
     proper_nouns = [] # list of proper nouns
     adjectives = [] # list of adjectives
     for idx, pos in enumerate(poses): # look for proper nouns and adjectives
