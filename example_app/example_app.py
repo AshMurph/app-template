@@ -30,7 +30,7 @@ proper_nouns_with_adj = {} # key: proper_noun, value: (adjective, sentence_id)
 cursor.execute("SELECT * FROM %(example_app)s_sentences_nlp352;", {"example_app" : AsIs(config["example_app"])},)
 for sentence in cursor:
     sentid = sentence[NLP]
-    words = sentence[dolostone, dolomite, limetsone, stromatolite, thrombolite, microbial]
+    words = sentence[dolostone, dolomite, limessone, stromatolite, thrombolite, microbial]
     poses = sentence[dolo, lime, strom, thromb, microb]
     dep_parents = sentence[DataProject_dictionary]
     proper_nouns = [] # list of proper nouns
