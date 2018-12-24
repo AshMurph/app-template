@@ -2,7 +2,7 @@
 app_name: carbonate_dataproject
 
 # A brief description of the app.
-description : categorize carbonates by type (dolomite, travertine, etc) and seperate them by terms (indicating differences in texture, chemistry. etc). Organize them into different bins. 
+description : categorize carbonates by type (dolomite, travertine, etc) and organize them into different bins. 
 
 # Your first and last name
 user: Ashley Murphy
@@ -19,4 +19,4 @@ language: Python
 # all listed terms will be used
 dictionaries: [DataProject_dictionary]
 
-terms: [therein]
+terms:
