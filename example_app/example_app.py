@@ -10,7 +10,7 @@ import yaml
 import psycopg2
 from psycopg2.extensions import AsIs
 
-with open('../credentials.yml', 'r') as credential_yaml:
+with open('../credentials.yml.example', 'r') as credential_yaml:
     credentials = yaml.load(credential_yaml)
 
 with open('../config.yml', 'r') as config_yaml:
@@ -29,10 +29,10 @@ proper_nouns_with_adj = {} # key: proper_noun, value: (adjective, sentence_id)
 # read all sentences from our NLP example database.
 cursor.execute("SELECT * FROM %(carbonate_dataproject)s_sentences_nlp352;", {"carbonate_dataproject" : AsIs(config["carbonate_dataproject"])},)
 for sentence in cursor:
-    sentid = sentence[NLP]
-    words = sentence[dolostone, dolomite, limessone, stromatolite, thrombolite, microbial]
-    poses = sentence[dolo, lime, strom, thromb, microb]
-    dep_parents = sentence[DataProject_dictionary]
+    sentid = sentence[1]
+    words = sentence[3]
+    poses = sentence[4]
+    dep_parents = sentence[8]
     proper_nouns = [] # list of proper nouns
     adjectives = [] # list of adjectives
     for idx, pos in enumerate(poses): # look for proper nouns and adjectives
